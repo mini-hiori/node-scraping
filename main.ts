@@ -1,9 +1,16 @@
-import superagent from 'superagent'
+import superagent from 'superagent';
+import cheerio from 'cheerio';
 
 export default async function Crawling () {
-    const url: string = "https://qiita.com/harashoo/items/912083bc9c38ce15bb1c";
+    const url  = "https://qiita.com/otchy/items/244c19c561ecb7211fa5";
+    // リクエスト飛ばす
     const result = await superagent.get(url);
-    console.log(result.text)
+    const html = result.text;
+    // cheerioを利用してhtmlパース
+    const $ = cheerio.load(html);
+    // cssセレクタ指定で要素を抽出→テキストだけ残す
+    const pageTitle = $("head > title").text();
+    console.log(pageTitle);
 }
 
 const crawling = Crawling();

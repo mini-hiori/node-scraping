@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@types/cheerio": "^0.22.28",
+    "@types/superagent": "^4.1.10",
+    "cheerio": "*",
+    "superagent": "^6.1.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}

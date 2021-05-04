@@ -1,2 +1,4 @@
-# node-scraping
-Node.jsでスクレイピングする
+# ts-scraping
+Node.js×TypeScriptでスクレイピングする
+
+## 
